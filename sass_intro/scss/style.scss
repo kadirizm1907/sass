@@ -17,6 +17,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap;
     img {
         width: 80px;
         border: $myBorder;
@@ -46,6 +47,7 @@ header{
 //? -------Banner-------
 
 .banner{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +55,9 @@ header{
     background-color: $bannerBgColor;
     line-height: 2rem;
     aside{
-
+        flex: 1;
+        display: flex;
+        justify-content: center;
         button{
             border: none;
             background-color: $buttonColor;
@@ -66,9 +70,10 @@ header{
         }
     }
     img{
-        width: 40%;
-        max-width: 600px;
-        min-width: 300px;
+        display: flex;
+        // width: 40%;
+        // max-width: 30%;
+        // min-width: 10%;
     }
 }
 //? -------Cards-------
@@ -140,3 +145,7 @@ footer{
     }
     }
 }
+@media (max-width: 480px) {
+    #banner {
+      flex-direction: column;
+    }}
