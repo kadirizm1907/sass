@@ -55,8 +55,8 @@ header{
     background-color: $bannerBgColor;
     line-height: 2rem;
     aside{
-        flex: 1;
-        display: flex;
+        
+        // display: flex;
         justify-content: center;
         button{
             border: none;
@@ -71,14 +71,17 @@ header{
     }
     img{
         display: flex;
-        // width: 40%;
+        width: 40%;
         // max-width: 30%;
         // min-width: 10%;
     }
 }
 //? -------Cards-------
 .cards {
+    width: 90%;
     display: flex;
+    margin: auto;
+    
     gap: 0.4rem;
     margin-top: 1rem;
     .card1{
@@ -101,15 +104,17 @@ header{
     display: flex;
     margin-top: 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
     .article1{
         background-color: gray;
-        flex: 1;
+        // flex: 1;
+        width: 100%;
         height: 10rem;
         border-radius: 10px;
         padding: 1rem;
 
     }
-.article2{
+    .article2{
     @extend .article1;
     background-color: green;
         //? uzun yazmak yerine extend ile birinci article1 i article 2 nin icine aldik
@@ -148,4 +153,39 @@ footer{
 @media (max-width: 480px) {
     #banner {
       flex-direction: column;
-    }}
+      aside {
+          #btn{
+            text-align: center;
+      }
+      }
+      
+      h2{
+        text-align: center;
+      }
+      img{
+        width: 100%;
+      }
+    }
+   .cards {
+    display: block;
+
+    
+    .card1{
+        width: 100%;
+        margin: 0.4rem;
+        
+    }
+    .card2{
+        width: 100%;
+        margin: 0.4rem;
+    }
+    .card3{
+        width: 100%;
+        margin: 0.4rem;
+    }
+    .card4{
+        width: 100%;
+        margin: 0.4rem;
+    }
+   }
+}
