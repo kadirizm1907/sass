@@ -1,6 +1,142 @@
+@import "variable";
+@import "reset";
+@import "mixin";
+
+
+
+body{
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+    background-color: $bgColor;
+}
+//? -------Header-------
 header{
-    background-color: aqua;
+    background-color: $navBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    img {
+        width: 80px;
+        border: $myBorder;
+        border-radius: 10px;
+        &:hover{
+            scale:1.1;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            padding-right: 0.5rem;
+            display: inline-block;
+
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+    }
+}
+//? -------Banner-------
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $bannerBgColor;
+    line-height: 2rem;
+    aside{
+
+        button{
+            border: none;
+            background-color: $buttonColor;
+            border-radius: 10px;
+            padding: 0.5rem;
+            &:hover{
+                background-color: $bgColor;
+                cursor: pointer;
+            }
+        }
+    }
     img{
-        width: 100px;
+        width: 40%;
+        max-width: 600px;
+        min-width: 300px;
+    }
+}
+//? -------Cards-------
+.cards {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    .card1{
+        @include card(yellow, black)
+    }
+    .card2{
+        @include card(red, yellow)
+    }
+    .card3{
+        @include card(black, white)
+    }
+    .card4{
+        @include card(blue, yellow)
+    }
+}
+
+//? -------Articles-------
+
+.articles {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+    .article1{
+        background-color: gray;
+        flex: 1;
+        height: 10rem;
+        border-radius: 10px;
+        padding: 1rem;
+
+    }
+.article2{
+    @extend .article1;
+    background-color: green;
+        //? uzun yazmak yerine extend ile birinci article1 i article 2 nin icine aldik
+}
+}
+
+
+footer{
+    p{
+        background-color: $bannerBgColor;
+
+    }
+    
+    .social-icons{
+        display: flex;
+
+        //?dizi olusturduk
+    $textColors : black, red, green, yellow, orange;
+
+    @for $i from 1 through length($textColors) {
+        .social#{$i} {
+            flex: 1;
+            font-size: $i * 1rem;
+            @if $i % 2 ==0{
+                background-color: darken(rgb(11, 15, 239), $i * 3);
+
+            }@else{
+                background-color: darken(yellow, $i * 3);
+            }
+            color: nth($textColors, $i);
+        }
+
+    }
     }
 }

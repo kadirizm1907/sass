@@ -1,8 +1,167 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*! mixin @include */
+/* fonksiyon tanımlıyoruz aslında. Bu fonksiyon parametre alabilen bir fonksiyon. Parametreleri tanımalrken $ işaretini kullanıyoruz. Mixinler parametre almak zorunda değildir. yani static yapılar da oluşturabiliriz. */
+/*mixinleri çaığırırken @include anahtar kelimesiyle çağırıyoruz.*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  background-color: pink;
+}
+
 header {
-  background-color: aqua;
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 header img {
-  width: 100px;
+  width: 80px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+header img:hover {
+  scale: 1.1;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: hotpink;
+  line-height: 2rem;
+}
+.banner aside button {
+  border: none;
+  background-color: rgb(224, 169, 169);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.banner img {
+  width: 40%;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.cards {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+.cards .card1 {
+  border-radius: 10px;
+  border: 2px solid brown;
+  color: black;
+  background-color: yellow;
+  text-align: center;
+  flex: 1;
+  height: 10rem;
+}
+.cards .card2 {
+  border-radius: 10px;
+  border: 2px solid brown;
+  color: yellow;
+  background-color: red;
+  text-align: center;
+  flex: 1;
+  height: 10rem;
+}
+.cards .card3 {
+  border-radius: 10px;
+  border: 2px solid brown;
+  color: white;
+  background-color: black;
+  text-align: center;
+  flex: 1;
+  height: 10rem;
+}
+.cards .card4 {
+  border-radius: 10px;
+  border: 2px solid brown;
+  color: yellow;
+  background-color: blue;
+  text-align: center;
+  flex: 1;
+  height: 10rem;
+}
+
+.articles {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: gray;
+  flex: 1;
+  height: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.articles .article2 {
+  background-color: green;
+}
+
+footer p {
+  background-color: hotpink;
+}
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons .social1 {
+  flex: 1;
+  font-size: 1rem;
+  background-color: #f0f000;
+  color: black;
+}
+footer .social-icons .social2 {
+  flex: 1;
+  font-size: 2rem;
+  background-color: #0a0dd2;
+  color: red;
+}
+footer .social-icons .social3 {
+  flex: 1;
+  font-size: 3rem;
+  background-color: #d1d100;
+  color: green;
+}
+footer .social-icons .social4 {
+  flex: 1;
+  font-size: 4rem;
+  background-color: #080bb4;
+  color: yellow;
+}
+footer .social-icons .social5 {
+  flex: 1;
+  font-size: 5rem;
+  background-color: #b3b300;
+  color: orange;
 }
 
 /*# sourceMappingURL=style.css.map */
