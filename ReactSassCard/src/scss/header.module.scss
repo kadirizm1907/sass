@@ -1,0 +1,15 @@
+@import "./variables";
+
+.title {
+    background-color: $Teal-Dream-4;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .header {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.9rem;
+    color: $Teal-Dark-1;
+  }

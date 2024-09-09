@@ -1,9 +1,9 @@
-
+import headerStyle from "../scss/header.module.scss"
 
 const Header = () => {
   return (
-    <div>
-        <h1>Personel Info</h1>
+    <div className={headerStyle.title}>
+        <h1 className={headerStyle.header}>Employees Comments</h1>
     </div>
   )
 }

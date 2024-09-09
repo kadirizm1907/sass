@@ -1,0 +1,43 @@
+@import "./variables";
+
+.main {
+  background-color: $Teal-Dark-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //*   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 3rem 1rem 3rem 1rem;
+}
+.card {
+  color: $Teal-Dark-5;
+  background-color: $Teal-Dream-3;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 28rem;
+  border-radius: 25px;
+  transition: transform 0.5s ease;
+}
+.card:hover,
+.card:active {
+  transform: scale(1.04);
+  opacity: 0.8;
+}
+.image {
+  
+  width: 18rem;
+  --mask: linear-gradient(#000 0 0) center/calc(100% - 60px) calc(100% - 60px)
+      no-repeat,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 0 0/60px
+      30px space no-repeat,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 0
+      100%/60px 30px space no-repeat,
+    conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0 0/30px
+      60px no-repeat space,
+    conic-gradient(from -135deg at right, #0000, #000 1deg 89deg, #0000 90deg)
+      100% 0/30px 60px no-repeat space;
+  display: inline-block;
+  aspect-ratio: 0.9;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
