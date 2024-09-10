@@ -1,7 +1,12 @@
+import Header from "./components/header/Header"
+import ProductsList from "./components/products/ProductsList"
+import { products, categories } from "./helper/data"
+
 function App() {
   return (
     <div>
-      <h1>React App</h1>
+      <Header categories={categories} text="Products"/>
+      <ProductsList products={products} />
     </div>
   )
 }
