@@ -1,3 +1,6 @@
-@import "./scss/variables";
 @import "./scss/reset";
-@import "./scss/mixins"
+
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #3d3236 100%);
+  min-height: 100vh;
+}
