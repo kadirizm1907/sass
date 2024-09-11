@@ -17,12 +17,13 @@
   //! buttons
 
   .btns {
-    @include flex(rows, center, 0.3rem);
+    @include flex(rows, center, 0rem);
     margin-top: 1rem;
+
     button {
       width: 11rem;
       padding: 1rem;
-      border-radius: $borderRadius;
+      border-radius: 38% 62% 49% 51% / 73% 42% 58% 27%;
       border: none;
       cursor: pointer;
       transition: all 1s;

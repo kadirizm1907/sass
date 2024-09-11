@@ -9,6 +9,7 @@
     height: $cardHeight;
     position: relative;
     overflow: hidden;
+    
     .price {
       position: absolute;
       top: 50%;
@@ -18,21 +19,25 @@
       color: $cardColor;
       padding: $cardPadding;
       font-size: 0.9rem;
-      border-radius: $borderRadius;
+      border-radius: 38% 62% 49% 51% / 73% 42% 58% 27%;
       z-index: 2;
     }
-    img {
+    .con-image {
+      position: relative;
+      padding: 1rem;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 38% 62% 49% 51% / 73% 42% 58% 27%;
       width: 100%;
-      height: $cardHeight;
-      border-radius: $borderRadius;
+      height: 350px;
       filter: none;
+      background-color: rgb(139, 221, 221);
     }
     &__over {
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color:rgb(0, 0, 0);
+      background-color: rgb(0, 0, 0);
       color: darken($cardColor, 50%);
       font-size: 1.2rem;
       padding: $cardPadding;
@@ -52,7 +57,7 @@
       transform: translateX(0%);
     }
     &:hover img {
-      filter: blur(2px) ;
+      filter: blur(2px);
     }
   }
 }
